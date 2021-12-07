@@ -1,0 +1,36 @@
+apiVersion: logging.kubesphere.io/v1alpha2
+kind: Filter
+metadata:
+  name: kubernetes
+  namespace: kubesphere-logging-system
+  labels:
+    logging.kubesphere.io/enabled: "true"
+    logging.kubesphere.io/component: logging
+spec:
+  match: kube.*
+  filters:
+    - kubernetes:
+        kubeURL: https://kubernetes.default.svc:443
+        kubeCAFile: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        kubeTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+        labels: false
+        annotations: false
+        mergeLog: true
+        k8sLoggingParser: true
+        k8sLoggingExclude: true
+    - nest:
+        operation: lift
+        nestedUnder: kubernetes
+#        addPrefix: kubernetes_
+    - modify:
+        rules:
+#          - remove: stream
+          - remove: pod_id
+          - remove: host
+          - remove: container_hash
+#    - nest:
+#        operation: nest
+#        wildcard:
+#          - kubernetes_*
+#        nestUnder: kubernetes
+#        removePrefix: kubernetes_
