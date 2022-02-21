@@ -11,3 +11,10 @@ resources:
 - ../config
 
 namespace: ${namespace}
+
+%{ if operatorImage != "" }
+images:
+- name: kubesphere/fluentbit-operator
+  newName: ${operatorImage}
+  newTag: %{ if operatorTag != "" }${operatorTag}%{ else }latest%{ endif }
+%{ endif }

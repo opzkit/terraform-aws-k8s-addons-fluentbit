@@ -14,7 +14,9 @@ resource "local_file" "kustomize_operator" {
   depends_on = [local_file.kustomize_config]
   filename   = "${path.module}/operator/kustomization.yaml"
   content = templatefile("${path.module}/kustomization.yaml.tpl", {
-    namespace = var.namespace,
+    namespace     = var.namespace,
+    operatorImage = var.operatorImage,
+    operatorTag   = var.operatorTag,
   })
 }
 
