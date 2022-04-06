@@ -12,9 +12,20 @@ resources:
 
 namespace: ${namespace}
 
-%{ if operatorImage != "" }
 images:
 - name: kubesphere/fluentbit-operator
   newName: ${operatorImage}
   newTag: %{ if operatorTag != "" }${operatorTag}%{ else }latest%{ endif }
-%{ endif }
+transformers:
+- |-
+  apiVersion: builtin
+  kind: ImageTagTransformer
+  metadata:
+    name: not-important-here
+  imageTag:
+    name: kubesphere/fluent-bit
+    newName: ${fluentbitImage}
+    newTag: %{ if fluentbitTag != "" }${fluentbitTag}%{ else }latest%{ endif }
+  fieldSpecs:
+    - path: spec/image
+      kind: FluentBit

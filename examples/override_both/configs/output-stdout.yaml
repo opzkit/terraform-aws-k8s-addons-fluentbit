@@ -1,0 +1,11 @@
+apiVersion: logging.kubesphere.io/v1alpha2
+kind: Output
+metadata:
+  name: stdout
+  namespace: fluent
+  labels:
+    logging.kubesphere.io/component: logging
+    logging.kubesphere.io/enabled: "true"
+spec:
+  match: "kube.*"
+  stdout: {}
