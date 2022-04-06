@@ -18,3 +18,20 @@ images:
   newName: ${operatorImage}
   newTag: %{ if operatorTag != "" }${operatorTag}%{ else }latest%{ endif }
 %{ endif }
+
+%{ if fluentbitImage != "" }
+transformers:
+- |-
+  apiVersion: builtin
+  kind: ImageTagTransformer
+  metadata:
+    name: not-important-here
+  imageTag:
+    name: kubesphere/fluent-bit
+    newName: ${fluentbitImage}
+    newTag: %{ if fluentbitTag != "" }${fluentbitTag}%{ else }latest%{ endif }
+  fieldSpecs:
+    - path: spec/image
+      kind: FluentBit
+
+%{ endif }

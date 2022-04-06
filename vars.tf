@@ -10,15 +10,25 @@ variable "configuration" {
   description = "Configuration for Fluentbit"
 }
 
-
 variable "operatorImage" {
   type        = string
   default     = ""
   description = ""
 }
 
-
 variable "operatorTag" {
+  type        = string
+  default     = ""
+  description = ""
+}
+
+variable "fluentbitImage" {
+  type        = string
+  default     = ""
+  description = ""
+}
+
+variable "fluentbitTag" {
   type        = string
   default     = ""
   description = ""

@@ -10,7 +10,7 @@ example/%:
 	@echo "Processing example: $(notdir $*)"
 	@terraform -chdir=$* init
 	@terraform -chdir=$* validate
-	@terraform -chdir=$* apply -auto-approve
+	@terraform -chdir=$* apply -auto-approve > $*/output
 	@terraform -chdir=$* output | grep -Fq 'namespace: override'
 	@terraform -chdir=$* output | grep -Fq 'kind: Output'
-
+	$*/validate.sh $*/output
