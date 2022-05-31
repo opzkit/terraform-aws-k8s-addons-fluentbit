@@ -13,7 +13,7 @@ resources:
 namespace: ${namespace}
 
 images:
-- name: kubesphere/fluentbit-operator
+- name: kubesphere/fluent-operator
   newName: ${operatorImage}
   newTag: %{ if operatorTag != "" }${operatorTag}%{ else }latest%{ endif }
 transformers:

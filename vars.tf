@@ -1,7 +1,7 @@
 variable "namespace" {
   type        = string
   default     = "fluentbit"
-  description = "namespace to create the fluentbit-operator resources in"
+  description = "namespace to create the fluent-operator resources in"
 }
 
 variable "configuration" {
@@ -12,14 +12,14 @@ variable "configuration" {
 
 variable "operatorImage" {
   type        = string
-  default     = "kubesphere/fluentbit-operator"
-  description = "Fluentbit operator image to use"
+  default     = "kubesphere/fluent-operator"
+  description = "Fluent operator image to use"
 }
 
 variable "operatorTag" {
   type        = string
-  default     = "latest"
-  description = "Fluentbit operator image tag to use"
+  default     = "v1.0.2"
+  description = "Fluent operator image tag to use"
 }
 
 variable "fluentbitImage" {
@@ -30,7 +30,7 @@ variable "fluentbitImage" {
 
 variable "fluentbitTag" {
   type        = string
-  default     = "v1.8.3"
+  default     = "v1.8.11"
   description = "Fluentbit image tag to use"
 }
 
