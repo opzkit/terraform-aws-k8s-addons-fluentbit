@@ -11,6 +11,7 @@ metadata:
 spec:
   image: kubesphere/fluent-bit:v1.8.3
   fluentBitConfigName: fluent-bit-config
+  priorityClassName: system-node-critical
   resources:
     limits:
       cpu: %{ if vars.cpuLimit != "" }${vars.cpuLimit}%{ else }500m%{ endif }

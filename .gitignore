@@ -1,4 +1,5 @@
 config/kustomization.yaml
+config/fluentbit.yaml
 operator/kustomization.yaml
 config/zz*
 
