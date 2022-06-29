@@ -13,11 +13,11 @@ spec:
   fluentBitConfigName: fluent-bit-config
   resources:
     limits:
-      cpu: 500m
-      memory: 200Mi
+      cpu: %{ if vars.cpuLimit != "" }${vars.cpuLimit}%{ else }500m%{ endif }
+      memory: %{ if vars.memLimit != "" }${vars.memLimit}%{ else }200Mi%{ endif }
     requests:
-      cpu: 10m
-      memory: 25Mi
+      cpu: %{ if vars.cpuRequest != "" }${vars.cpuRequest}%{ else }10m%{ endif }
+      memory: %{ if vars.memRequest != "" }${vars.memRequest}%{ else }25Mi%{ endif }
   positionDB:
     hostPath:
       path: /var/lib/fluent-bit/

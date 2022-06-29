@@ -34,3 +34,9 @@ variable "fluentbitTag" {
   description = "Fluentbit image tag to use"
 }
 
+variable "fluentbitResources" {
+  type        = object({ cpuRequest : string, cpuLimit : string, memRequest : string, memLimit : string })
+  default     = { cpuRequest : "10m", cpuLimit : "500m", memRequest : "25Mi", memLimit : "200Mi" }
+  description = "Fluentbit container resources"
+}
+
