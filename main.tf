@@ -2,6 +2,13 @@ locals {
   addon_yaml = module.kustomize.stdout
 }
 
+resource "local_file" "fluentbit" {
+  filename = "${path.module}/config/fluentbit.yaml"
+  content = templatefile("${path.module}/fluentbit.yaml.tpl", {
+    vars = var.fluentbitResources
+  })
+}
+
 resource "local_file" "kustomize_config" {
   depends_on = [local_file.configs]
   filename   = "${path.module}/config/kustomization.yaml"
@@ -11,7 +18,7 @@ resource "local_file" "kustomize_config" {
 }
 
 resource "local_file" "kustomize_operator" {
-  depends_on = [local_file.kustomize_config]
+  depends_on = [local_file.kustomize_config, local_file.fluentbit]
   filename   = "${path.module}/operator/kustomization.yaml"
   content = templatefile("${path.module}/kustomization.yaml.tpl", {
     namespace      = var.namespace,
