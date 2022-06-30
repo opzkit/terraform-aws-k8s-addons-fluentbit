@@ -1,15 +1,12 @@
-apiVersion: logging.kubesphere.io/v1alpha2
+apiVersion: fluentbit.fluent.io/v1alpha2
 kind: FluentBit
 metadata:
   name: fluent-bit
-  namespace: kubesphere-logging-system
+  namespace: fluent
   labels:
     app.kubernetes.io/name: fluent-bit
-  annotations:
-    fluentbit.io/exclude: "true"
-    logging.kubesphere.io/exclude: "true"
 spec:
-  image: kubesphere/fluent-bit:v1.8.3
+  image: kubesphere/fluent-bit:v1.8.11
   fluentBitConfigName: fluent-bit-config
   priorityClassName: system-node-critical
   resources:
@@ -19,8 +16,12 @@ spec:
     requests:
       cpu: %{ if vars.cpuRequest != "" }${vars.cpuRequest}%{ else }10m%{ endif }
       memory: %{ if vars.memRequest != "" }${vars.memRequest}%{ else }25Mi%{ endif }
-  positionDB:
-    hostPath:
-      path: /var/lib/fluent-bit/
   tolerations:
-    - operator: Exists
+  - operator: Exists
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: node-role.kubernetes.io/edge
+            operator: DoesNotExist

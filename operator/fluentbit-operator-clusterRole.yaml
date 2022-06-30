@@ -1,100 +1,95 @@
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   labels:
     app.kubernetes.io/component: controller
-    app.kubernetes.io/name: fluentbit-operator
-  name: kubesphere:operator:fluentbit-operator
+    app.kubernetes.io/name: fluent-operator
+  name: fluent-operator
 rules:
-  - apiGroups:
-      - apps
-    resources:
-      - daemonsets
-    verbs:
-      - create
-      - delete
-      - get
-      - list
-      - patch
-      - update
-      - watch
-  - apiGroups:
-      - ""
-    resources:
-      - pods
-    verbs:
-      - get
-  - apiGroups:
-      - ""
-    resources:
-      - secrets
-      - configmaps
-    verbs:
-      - create
-      - delete
-      - get
-      - list
-      - patch
-      - update
-      - watch
-  - apiGroups:
-      - ""
-    resources:
-      - serviceaccounts
-    verbs:
-      - create
-      - delete
-      - get
-      - list
-      - patch
-      - update
-      - watch
-  - apiGroups:
-      - logging.kubesphere.io
-    resources:
-      - filters
-      - fluentbitconfigs
-      - fluentbits
-      - inputs
-      - outputs
-      - parsers
-    verbs:
-      - create
-      - delete
-      - get
-      - list
-      - patch
-      - update
-      - watch
-  - apiGroups:
-      - logging.kubesphere.io
-    resources:
-      - filters
-      - inputs
-      - outputs
-    verbs:
-      - list
-  - apiGroups:
-      - logging.kubesphere.io
-    resources:
-      - fluentbitconfigs
-    verbs:
-      - create
-      - delete
-      - get
-      - list
-      - patch
-      - update
-      - watch
-  - apiGroups:
-      - rbac.authorization.k8s.io
-    resources:
-      - clusterrolebindings
-    verbs:
-      - create
-  - apiGroups:
-      - rbac.authorization.k8s.io
-    resources:
-      - clusterroles
-    verbs:
-      - create
+- apiGroups:
+  - apps
+  resources:
+  - daemonsets
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  - configmaps
+  - serviceaccounts
+  - configmaps
+  - services
+  - namespaces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - fluentbit.fluent.io
+  resources:
+  - fluentbits
+  - clusterfluentbitconfigs
+  - clusterfilters
+  - clusterinputs
+  - clusteroutputs
+  - clusterparsers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - fluentd.fluent.io
+  resources:
+  - fluentds
+  - fluentds/status
+  - clusterfluentdconfigs
+  - clusterfluentdconfigs/status
+  - fluentdconfigs
+  - fluentdconfigs/status
+  - clusterfilters
+  - filters
+  - clusteroutputs
+  - outputs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterrolebindings
+  verbs:
+  - create
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterroles
+  verbs:
+  - create
