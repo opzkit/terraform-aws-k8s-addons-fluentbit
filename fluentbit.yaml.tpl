@@ -16,6 +16,9 @@ spec:
     requests:
       cpu: %{ if vars.cpuRequest != "" }${vars.cpuRequest}%{ else }10m%{ endif }
       memory: %{ if vars.memRequest != "" }${vars.memRequest}%{ else }25Mi%{ endif }
+  positionDB:
+    hostPath:
+      path: /var/lib/fluent-bit/
   tolerations:
   - operator: Exists
   affinity:
