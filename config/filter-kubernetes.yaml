@@ -25,7 +25,6 @@ spec:
       rules:
       #      - remove: stream
       - remove: pod_id
-      - remove: host
       - remove: container_hash
 #  - nest:
 #      operation: nest
