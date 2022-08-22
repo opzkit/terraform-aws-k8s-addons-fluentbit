@@ -20,16 +20,7 @@ spec:
   - nest:
       operation: lift
       nestedUnder: kubernetes
-  #      addPrefix: kubernetes_
   - modify:
       rules:
-      #      - remove: stream
       - remove: pod_id
-      - remove: host
       - remove: container_hash
-#  - nest:
-#      operation: nest
-#      wildcard:
-#      - kubernetes_*
-#      nestUnder: kubernetes
-#      removePrefix: kubernetes_
