@@ -1,9 +1,9 @@
+# Local .terraform directories
 config/kustomization.yaml
 config/fluentbit.yaml
 operator/kustomization.yaml
 config/zz*
 
-# Local .terraform directories
 **/.terraform/*
 
 # .tfstate files
