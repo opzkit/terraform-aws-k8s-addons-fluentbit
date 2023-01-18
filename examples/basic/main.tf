@@ -5,5 +5,5 @@ module "fluent" {
 }
 
 output "yaml" {
-  value = module.fluent.addon
+  value = module.fluent.addons
 }
