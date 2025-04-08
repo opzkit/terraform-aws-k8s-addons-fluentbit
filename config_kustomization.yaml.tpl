@@ -15,4 +15,3 @@ resources:
 %{ for c in configs ~}
 - ${c}
 %{ endfor ~}
-

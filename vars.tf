@@ -39,4 +39,3 @@ variable "fluentbitResources" {
   default     = { cpuRequest : "10m", cpuLimit : "500m", memRequest : "25Mi", memLimit : "200Mi" }
   description = "Fluentbit container resources"
 }
-

@@ -1,5 +1,3 @@
-#!/usr/bin/make -f
-
 SHELL = /bin/bash
 EXAMPLES = $(shell find ./examples/* -maxdepth 0 -type d -not -path '*/\.*')
 .PHONY: examples

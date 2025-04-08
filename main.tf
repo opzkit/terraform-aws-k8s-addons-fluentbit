@@ -41,4 +41,3 @@ module "kustomize" {
   version    = "0.2.0"
   command    = "kubectl kustomize ${path.module}/operator"
 }
-
