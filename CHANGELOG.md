@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.1...v1.0.2) (2025-07-09)
+
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.5 ([#35](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/35)) ([f70ef98](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/f70ef98afb6dc9472229d40ecc947b3531554e65))
+
 ## [1.0.1](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.0...v1.0.1) (2025-06-19)
 
 
