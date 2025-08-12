@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.2](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.1...v1.0.2) (2025-08-12)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v4.3.0 ([#40](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/40)) ([2546f6b](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/2546f6b53f2ea991ea6196ef21ba33510cbd0339))
+* **deps:** update actions/checkout action to v5 ([#41](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/41)) ([d1ba717](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/d1ba717d22f0efe897a12cec8c7dbb488a45f4e1))
+* **deps:** update actions/checkout digest to 08eba0b ([#39](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/39)) ([18f2779](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/18f2779ac4b75a0bca3783bfd417cacaa776d754))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.100.0 ([#37](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/37)) ([12c1979](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/12c1979519867fd8129c3b85e04805d87ebc8060))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.5 ([#35](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/35)) ([f70ef98](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/f70ef98afb6dc9472229d40ecc947b3531554e65))
+* **deps:** update pre-commit hook pre-commit/pre-commit-hooks to v6 ([#38](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/38)) ([b7f6d82](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/b7f6d82e62c84b437fd725254e2765b3daf7f936))
+* **deps:** update terraform-linters/setup-tflint action to v5 ([#42](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/42)) ([90a8731](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/90a8731c01b9b5f9e04c39106fb89647567182f4))
+
 ## [1.0.1](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.0...v1.0.1) (2025-06-19)
 
 
