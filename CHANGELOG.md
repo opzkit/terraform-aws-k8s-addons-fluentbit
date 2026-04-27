@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.0.3](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.2...v1.0.3) (2026-04-27)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token action to v3 ([#125](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/125)) ([cedb195](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/cedb19569f59a41f4b5fc45f43cb03d38b1bc97c))
+* **deps:** update actions/create-github-app-token digest to 1b10c78 ([#130](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/130)) ([621e657](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/621e6577d7a600b9d9a65b50ed0d9aad90eed853))
+* **deps:** update actions/create-github-app-token digest to 7bd0371 ([#129](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/129)) ([dfd4fe4](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/dfd4fe46f5eb1ef4dde6d2af78fa7b4114635d32))
+* **deps:** update actions/create-github-app-token digest to fee1f7d ([#123](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/123)) ([aa40e2e](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/aa40e2ef1db3f4e5da36ff6a6502f45d7b7fd900))
+* **deps:** update googleapis/release-please-action action to v5 ([#134](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/134)) ([d4752e0](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/d4752e02b078a1c0dd090bb1b3e279ff2871b759))
+* **deps:** update googleapis/release-please-action digest to 5c625bf ([#132](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/132)) ([a01d04d](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/a01d04d4032b6833f08e0012f09c07d680da1bd5))
+* **deps:** update hashicorp/setup-terraform action to v4 ([#121](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/121)) ([83cdb3d](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/83cdb3dfa7cf32739ec8b9d88a474f466ba1b5a1))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.104.4 ([#128](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/128)) ([5cb2411](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/5cb2411248ca7d19ae30fd471e70260089609934))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.111.0 ([#131](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/131)) ([eaca4cd](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/eaca4cd2f0f486bc69c2a779d74282ac5ac22394))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.126.0 ([#133](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/133)) ([e1c8cda](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/e1c8cdab95164413adc9dcd949de3f0b36709b44))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.140.0 ([#135](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/135)) ([27d1572](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/27d1572b247139d7cb5ef36094b4ea205b3dbf83))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.31.1 ([#119](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/119)) ([2425b0a](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/2425b0adcb41449dd3b2a9327f9176b7744f88c0))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.46.6 ([#122](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/122)) ([1179272](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/1179272f2f91f278f81ded89202247881ab6660f))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.86.0 ([#126](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/126)) ([0af5667](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/0af56674958d04f49b907f359f273bcec4875620))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.99.1 ([#127](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/127)) ([77ee1ac](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/77ee1acef4889eddc86ae0d146823c7e4fedd9bb))
+* **deps:** update terraform-linters/setup-tflint action to v6.2.2 ([#124](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/issues/124)) ([100a227](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/commit/100a2275ed31522df33828e637fb9d0b53b58988))
+
 ## [1.0.2](https://github.com/opzkit/terraform-aws-k8s-addons-fluentbit/compare/v1.0.1...v1.0.2) (2026-02-18)
 
 
